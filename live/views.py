@@ -6,6 +6,8 @@ from django.views.decorators.clickjacking import xframe_options_exempt
 from django.http import Http404, StreamingHttpResponse, HttpResponse
 
 import requests as req, json
+import urllib3
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 import cv2
 
 import json, os
