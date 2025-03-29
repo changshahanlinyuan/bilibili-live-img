@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-+%1fe9n_-q(kte4#j2ekoxn1bqc!&ysoex+bz78^^i%ss0sko9
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['bilibili-live-img.up.railway.app']
+ALLOWED_HOSTS = ['bilibili-live-img.up.railway.app', '127.0.0.1']
 
 
 # Application definition
@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+
+    'live',
 ]
 
 MIDDLEWARE = [

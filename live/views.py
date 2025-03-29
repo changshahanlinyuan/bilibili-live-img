@@ -39,15 +39,15 @@ def getm5u8url(m5u8id):
         return -1
 
 
-file = open("/home/xiaochen004hao/xiaochenweb/main/error.png", 'rb')
+print(os.getcwd())
+file = open("./static/error.png", 'rb')
 result = file.read()
 file.close()
 
 
 @csrf_exempt
 @xframe_options_exempt
-def live(request, pip install opencv-python
-):
+def live(request, m5u8id):
     m5u8url = getm5u8url(m5u8id)
     if m5u8url == -1:
         return HttpResponse(result, content_type='image/png')
