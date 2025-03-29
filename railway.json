@@ -4,6 +4,6 @@
         "builder": "RAILPACK"
     },
     "deploy": {
-        "startCommand": "python manage.py runserver 8080"
+        "startCommand": "python manage.py migrate && gunicorn bilibiliLiveImg:application"
     }
 }
