@@ -12,8 +12,11 @@ import cv2
 
 import json, os
 
-os.environ["NO_PROXY"] = "api.live.bilibili.com,bilibili.com,*.bilibili.com"
+# os.environ["NO_PROXY"] = "api.live.bilibili.com,bilibili.com,*.bilibili.com"
 
+
+@csrf_exempt
+@xframe_options_exempt
 def index(request):
     return render(request, "live/index.html", {})
 
