@@ -5,7 +5,7 @@
         "buildCommand": "python -m pip install -r requirements.txt"
     },
     "deploy": {
-        "preDeployCommand": ["python -m pip install -r requirements.txt && python -m pip uninstall -y opencv-python-headless && python -m pip install https://files.pythonhosted.org/packages/dd/5c/c139a7876099916879609372bfa513b7f1257f7f1a908b0bdc1c2328241b/opencv_python_headless-4.11.0.86-cp37-abi3-manylinux_2_17_x86_64.manylinux2014_x86_64.whl"],
+        "preDeployCommand": ["python -m pip uninstall -y opencv-python && python -m pip install -r requirements.txt && sudo yum install mesa-libGL -y"],
         "startCommand": "python manage.py migrate && python manage.py collectstatic --noinput && gunicorn bilibiliLiveImg.wsgi"
     }
 }
